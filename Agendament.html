@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>Agendamento para banho e tosa</title>
+    <meta name="description" content="Cuide de seu Pet, faça agendamento para banho e tosa online">
+    <meta name="keywords" content="banho, tosa, pet">
+</head>
+
+<body>
+    <h1>Agendamento para banho e tosa</h1>
+    <h2>Faça o seu agendamento com pelo menos 48 horas de antencedêndia</h2>
+
+    <form action="agendar.php" method="post">
+
+        <fieldset>
+            <legend>Identificação do dono do Pet</legend>
+            <p>
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu Nome" value="" required>
+            </p>
+
+            <!--
+            <label for="senha">Senha: </label>
+            <input type="password" name="senha" id="senha">
+         -->
+            <p>
+                <label for="e-mail">E-mail: </label>
+                <input type="email" name="email" id="email" placeholder="Digite seu E-mail" required>
+            </p>
+
+            <p>
+                <label for="telefone">Telefone: </label>
+                <input type="tel" name="telefone" id="telefone" placeholder="(00) 00000-0000" required>
+            </p>
+
+            <p>
+                <label for="cep">CEP: </label>
+                <input type="text" name="cep" id="cep" placeholder="00000-000" required>
+            </p>
+
+            <p>
+                <label for="endereco">Endereço: </label>
+                <input type="text" name="endereco" id="endereco" placeholder="Digite seu endereço">
+            </p>
+
+            <p>
+                <label for="numero">Número: </label>
+                <input type="text" name="numero" id="numero" placeholder="Digite seu Número" required>
+            </p>
+
+            <p>
+                <label for="bairro">Bairro: </label>
+                <input type="text" name="bairro" id="bairro" placeholder="Digite o Bairro" required>
+            </p>
+
+            <p>
+                <label for="cidade">Cidade: </label>
+                <input type="text" name="cidade" id="cidade" placeholder="Digite a Cidade" required>
+            </p>
+
+            <p>
+                <label for="estado">Estado: </label>
+                <select name="estado" id="estado">
+                    <option value="">Selecione o Estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP" selected>São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    <option value="EX">Estrangeiro</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Pet</legend>
+
+            <p>
+                <label for="nomePet">Nome</label>
+                <input name="nomePet" type="text" id="nomePet" placeholder="Digite o nome do Pet" required>
+            </p>
+
+            <p>
+                <strong>Porte do Pet</strong><br>
+
+                <label><input type="radio" name="portePet" required> Pequeno</label>
+                <label><input type="radio" name="portePet" required> Médio</label>
+                <label><input type="radio" name="portePet" required> Grande</label>
+            </p>
+
+            <p>
+                <label for="tipoTosa">Tipo da Tosa</label>
+                <select name="tipoTosa" id="tipoTosa">
+                    <option value="">Nenhum</option>
+                    <option value="padrão">Tosa Padrão</option>
+                    <option value="higiênica">Tosa Higiênica</option>
+                    <option value="tesoura">Tosa na Tesoura</option>
+                    <option value="raça">Tosa da Raça</option>
+                    <option value="bebe">Tosa Bebê</option>
+                </select>
+
+            </p>
+
+            <p>
+                <label for="observacoes">Observações</label>
+                <textarea name="observacoes" id="observacoes" rows="5" cols="30"></textarea>
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Horário</legend>
+            <p>Indique os dias da semana de sua preferência<br>
+            <label><input type="checkbox" name="diaSemana[]" required>Segunda-Feira</label>
+            <label><input type="checkbox" name="diaSemana[]" required>Terça-Feira</label>
+            <label><input type="checkbox" name="diaSemana[]" required>Quarta-Feira</label>
+            <label><input type="checkbox" name="diaSemana[]" required>Quinta-Feira</label>
+            <label><input type="checkbox" name="diaSemana[]" required>Sexta-Feira</label>
+            <label><input type="checkbox" name="diaSemana[]" required>Sábado</label>
+        </p>
+
+        <p>
+            <label for="dataPrimeira">Primeira opção de horário</label>
+            <input type="datetime-local" name="dataPrimeira" id="dataPrimeira" required>
+        </p>
+
+        <p>
+            <label for="datasegunda">Segunda opção de horário</label>
+            <input type="datetime-local" name="dataSegunda" id="dataSegunda" required>
+        </p>
+        </fieldset>
+
+        
+
+        <!-- <input type="submit" value="Agendar">
+        -->
+
+        <button type="submit">Agendar</button>
+
+    </form>
+
+</body>
+
+</html>
